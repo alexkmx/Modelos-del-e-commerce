@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Ecommerce - Productos{% endblock %}
+
+{% block content %}
+   
+
+    <h1>Lista de productos</h1>
+
+    {% for product in products %}
+
+    <li>
+         <a href="/productos/{{product.id}}">{{product.name}} {{product.precio}}</a>
+    </li>
+{% endfor %}
+    
+{% endblock %}
